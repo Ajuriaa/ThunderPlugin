@@ -1,0 +1,13 @@
+name: Thunder
+main: com.thunder.Main
+version: ${project.version}
+version: '1.0'
+api-version: '1.16'
+description: A test plugin
+author: Ajuuu
+website: wasalona.org
+load: STARTUP
+commands:
+  thunder:
+    description: Summon lightning on a player
+    usage: /thunder <player>
