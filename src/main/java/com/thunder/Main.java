@@ -22,6 +22,12 @@ public class Main extends org.bukkit.plugin.java.JavaPlugin implements CommandEx
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
+        // Check permissions
+        if (!sender.hasPermission("thunder.use")) {
+            sender.sendMessage("You don't have permission to use this command.");
+            return false;
+        }
+
         if (args.length != 1) {
             sender.sendMessage("Usage: /thunder <player>");
             return true;
